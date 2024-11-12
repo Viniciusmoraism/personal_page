@@ -47,6 +47,7 @@
             min-height: 200px;
             background-color: rgba(232, 231, 236, 0.637);
             position: relative;
+            flex-wrap: wrap;
         }
 
         .background-image {
@@ -65,6 +66,7 @@
             position: relative;
             z-index: 100;
             text-align: center;
+            width: 100%;
         }
 
         .header-text {
@@ -108,7 +110,7 @@
 
         /* Container Principal */
         .container {
-            width: 80%;
+            width: 90%;
             margin: auto;
             padding: 10px;
         }
@@ -129,6 +131,7 @@
             text-align: center;
             box-shadow: 0 4px 8px rgba(187, 5, 5, 0.1);
             margin-bottom: 20px;
+            transition: transform 0.3s;
         }
 
         .plano img {
@@ -196,6 +199,32 @@
             text-align: center;
             margin-top: 40px;
         }
+
+        /* Media Queries para responsividade */
+        @media (max-width: 768px) {
+            header {
+                padding: 20px;
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .header-text h1 {
+                font-size: 1.5em;
+            }
+
+            .plano, .moto, .benefit {
+                width: 100%;
+            }
+
+            .planos, .motos, .benefits {
+                justify-content: center;
+            }
+
+            .whatsapp-button {
+                font-size: 1em;
+                padding: 10px 20px;
+            }
+        }
     </style>
 </head>
 <body>
@@ -244,16 +273,16 @@
     </section>
 
     <section id="motos">
-        <h1>MOTOS DISPONÍVEIS PARA LOCAÇÃO</h1>
+        <h1>MOTOS DISPONÍVEIS</h1>
         <div class="motos">
             <div class="moto">
-                <img src="dk160.png" alt="Moto DK160">
+                <img src="dk160.png" alt="Moto 1">
             </div>
             <div class="moto">
-                <img src="DK.png" alt="Moto DK150">
+                <img src="DK.png" alt="Moto 2">
             </div>
             <div class="moto">
-                <img src="SHI.png" alt="Moto SHI175">
+                <img src="SHI.png" alt="Moto 3">
             </div>
             <div class="moto">
                 <img src="JEF150.png" alt="Moto JEF150">
@@ -267,21 +296,17 @@
 
         </div>
     </section>
-
     <section id="beneficios">
-        <h1>BENEFÍCIOS</h1>
+        <h1>Benefícios de Alugar Conosco</h1>
         <div class="benefits">
             <div class="benefit">
-                <img src="imposto.png" alt="Sem entrada">
-            
+                <img src="imposto.png" alt="Benefício 1">
             </div>
             <div class="benefit">
-                <img src="manut.png" alt="Entrega e retirada no local">
-               
+                <img src="manut.png" alt="Benefício 2">
             </div>
             <div class="benefit">
-                <img src="prot.png" alt="Documentação">
-                
+                <img src="prot.png" alt="Benefício 3">
             </div>
         </div>
         <div style="text-align: center; margin-top: 30px;">
@@ -290,10 +315,8 @@
         </div>
     </section>
 </div>
-
-<!-- Rodapé -->
 <footer>
-    <p>&copy; 2024 Consultora Sara - Todos os direitos reservados.</p>
+    <p>&copy; 2024 Consultora Sara - Todos os direitos reservados</p>
 </footer>
 
 </body>
